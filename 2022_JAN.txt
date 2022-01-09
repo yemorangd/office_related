@@ -1,0 +1,29 @@
+# Vertica column name referencing
+
+In case of applying renaming a column with the same column name as the original column name,
+further selection of that column may cause unexpected behavior within same SELECT clause.
+
+for example...
+------------------------------
+SELECT do_something(a) as a
+      ,CASE WHEN A ~~~ THEN B
+            WHEN A ~~~ THEN C
+            ...
+            END AS Z
+        FROM some_table
+------------------------------
+In this case, later CASE clause still references original column A from some_table,
+which function do_soemthing wasn't appllied.
+
+First of all, you better not rename a column to the same name it started with.
+In case of further references are too big ordeal to alter, than have SELECT - RENAME part as a subquery.
+
+# Monthly updated tables
+You'd better not forget it's monthly update cycles.
+It is mostly based on business dates, which is quite counter-intuitive.
+Opt to use daily/master tables rather than monthly/historical tables.
+
+# be case sensitive
+I know Teradata's CASE INSENSITIVE was such a strong option to manage tables,
+however it didn't carried over to Vertica.
+Assert upper/lower cases or be meticulous on handling alphabetic characters in your query.
