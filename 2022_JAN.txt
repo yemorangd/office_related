@@ -27,3 +27,9 @@ Opt to use daily/master tables rather than monthly/historical tables.
 I know Teradata's CASE INSENSITIVE was such a strong option to manage tables,
 however it didn't carried over to Vertica.
 Assert upper/lower cases or be meticulous on handling alphabetic characters in your query.
+
+
+# 1월 10일
+# Vertica UPPER/LOWER 함수
+해당 함수는 전각 영문자 'ａ', 'ｂ', 'ｃ' 식의 문자도 대문자로 변경함
+쿼리에서 UPPER/LOWER 이용 시 전각문자를 특수문자처럼 치부하지 말고, 대소문자 처리 마찬가지로 적용됨을 잊지 말 것
