@@ -33,3 +33,11 @@ Assert upper/lower cases or be meticulous on handling alphabetic characters in y
 # Vertica UPPER/LOWER 함수
 해당 함수는 전각 영문자 'ａ', 'ｂ', 'ｃ' 식의 문자도 대문자로 변경함
 쿼리에서 UPPER/LOWER 이용 시 전각문자를 특수문자처럼 치부하지 말고, 대소문자 처리 마찬가지로 적용됨을 잊지 말 것
+
+# 1월 13일
+# DOS/UNIX 파일
+문서 편집기 통해 쉘파일 편집 시, DOS파일로 변환하는 일 없게끔 할 것.
+라인별 마감 문자가 다른데, 쉘 스크립트 실행 환경 상 UNIX 파일 형식 그대로 유지하게끔 해야 함
+# EUC-KR / UTF-8 인코딩 문제
+파이썬 코드로 특정 인코딩 결과물이 깨지는지 여부 대조 가능
+unicode(random_string, 'random_encoding_1').encode('random_encoding_2') ~ 이런 식
