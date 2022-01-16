@@ -41,3 +41,15 @@ Assert upper/lower cases or be meticulous on handling alphabetic characters in y
 # EUC-KR / UTF-8 인코딩 문제
 파이썬 코드로 특정 인코딩 결과물이 깨지는지 여부 대조 가능
 unicode(random_string, 'random_encoding_1').encode('random_encoding_2') ~ 이런 식
+
+# 1월 16일
+# 서비스가 기획된 방향에는 다 이유가 있다.
+탑다운이건 바텀업이든, 기획/개발 양면의 히스토리를 최대한 알아두자.
+'그냥 그렇게 만들어졌다' 라고 말해도 되는 서비스는 없다. 
+신규개발을 하건, 개선작업을 하건 아무 히스토리도 모르고 작업하는 것은 무책임한 일이다.
+# Jupyter Notebook ''/() 자동입력 안 되는 문제
+출근하면 테스트해볼 것
+- ~/.jupyter/custom/custom.js 파일 확인하여 
+IPython.CodeCell.options_default.cm_config.autoCloseBrackets = false 과 같이 설정을 변경할 수 있는지 여부
+- %config Completer.use_jedi = False 식으로 jedi를 끄거나 삭제/업데이트가 가능한지
+
