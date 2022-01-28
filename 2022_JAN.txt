@@ -60,3 +60,12 @@ IPython.CodeCell.options_default.cm_config.autoCloseBrackets = false 과 같이 
 MAKEUTF8(target_string, replacement_string) 식의 함수를 써서 일괄 치환/혹은 삭제(replacement_string을 입력하지 않을 시) 가능
 참조 : https://www.vertica.com/blog/quick-tip-replacing-non-utf-8-characters/
 
+# 1월 28일
+# Vertica Scalar subquery & Aggregation
+오라클/티베로와 달리, 버티카의 경우 Aggregation/Group by 관련 차이점이 있음
+1) Group by 이용 시, Group by의 기준으로 넣는 것이 아니라면 
+select 절 내에 스칼라 서브쿼리 사용 불가능
+2) select 1, 2, 3 from ~~~ group by 1, 2, 3, 4 식의 쿼리 사용 시,
+오라클/티베로는 처리가 가능하나 버티카에서는 문법상 처리 불가능함.
+화면단 조회 쿼리는 기본적으로 오라클/티베로 기반이므로, 이처럼 사용 불가능한 문법이 사용된 경우 있으니 주의.
+
