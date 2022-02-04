@@ -1,0 +1,6 @@
+# 2월 4일
+- Vertica에는 Qualify 구문 없는 것 잊지 말 것, 셀렉트 한번 더 해서 WHERE 조건 걸어야 한다
+- REXEXP_LIKE 써서 대소문자 가지고 헤메는 일 줄이자
+: https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/SQLReferenceManual/Functions/RegularExpressions/REGEXP_LIKE.htm?Highlight=regexp_like
+Docs 참고, 'i' 옵션으로 대소문자 차이 무시 가능함.
+
