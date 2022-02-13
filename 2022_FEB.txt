@@ -2,5 +2,15 @@
 - Vertica에는 Qualify 구문 없는 것 잊지 말 것, 셀렉트 한번 더 해서 WHERE 조건 걸어야 한다
 - REXEXP_LIKE 써서 대소문자 가지고 헤메는 일 줄이자
 : https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/SQLReferenceManual/Functions/RegularExpressions/REGEXP_LIKE.htm?Highlight=regexp_like
-Docs 참고, 'i' 옵션으로 대소문자 차이 무시 가능함.
+  Docs 참고, 'i' 옵션으로 대소문자 차이 무시 가능함.
 
+# 2월 13일
+- Pandas의 결측치는 기본적으로 np.NaN을 사용함.
+: 결측치 인식은 이 값 가지고 직접적으로 하면 안되는 것을 잊지 말자.
+  np.NaN == np.NaN -> False, np.NaN != np.NaN -> True임.
+
+- 기술적인 이야기는 아니지만.. ELS 계통 상품 내용 잊지 않게 메모해두자.
+: ELS = Equity Linked Securities, 특정 Equity의 가격에 연동되어 수익을 제공하는 증권 상품 / 증권사만 발행 가능
+        조기/만기상환 기준일 가짐. 여타 상품들도 동일
+  ELF = ELS를 자산운용사를 경유하여 펀드로 가공, 은행 판매
+  ELT = ELS를 편입한 신탁상품, 은행 판매
