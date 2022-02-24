@@ -14,3 +14,13 @@
         조기/만기상환 기준일 가짐. 여타 상품들도 동일
   ELF = ELS를 자산운용사를 경유하여 펀드로 가공, 은행 판매
   ELT = ELS를 편입한 신탁상품, 은행 판매
+
+# 2월 24일
+- https다 좀.. 까먹지 말자
+- Hadoop/Impala
+: OR 조건문에 nested subquries 사용 불가
+: With문 2개 사용 불가, 걍 테이블로 찍자
+: 템포러리 테이블 없음. 쓰고 지우자
+: UNION은 기본적으로 UNION DISTINCT
+: Boolean comparison에 다수의 서브쿼리 사용 불가
+
